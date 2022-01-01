@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>素数</title>
+</head>
+<body>
+    <script>
+        let a=[2];
+        document.write(a);
+        let c=0;
+        document.body.onkeydown=ab;
+        function ab(){
+            document.open();
+            let b=a[c]+1;
+            c++;
+            let i=0;
+            abc();
+            function abc(){
+                let i=0;
+                let sqrt=Math.sqrt(b);
+                let floor=Math.floor(sqrt);
+                abcd();
+                function abcd(){
+                    const element = a[i];
+                    let o=b/element;
+                    let ok=Math.floor(o);
+                    if (ok!==o && floor>=element){
+                        i++;
+                        abcd();
+                    } else if(floor<element){
+                        a.push(b);
+                        let i=0;
+                        return;
+                    } else if(ok===o){
+                        b++;
+                        let i=0;
+                        abc();
+                    }
+                }
+            }
+            document.write(a);
+            document.body.onkeydown=ab;
+        }
+    </script>
+</body>
+</html>
